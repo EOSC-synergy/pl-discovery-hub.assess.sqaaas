@@ -1,0 +1,72 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cyfronet-fid/pl-discovery-hub:
+      branch: development
+      repo: https://github.com/cyfronet-fid/pl-discovery-hub
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cyfronet-fid/pl-discovery-hub git:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-alizarin-buffalo.sh
+        container: qc.acc_skanky-saffron-oriole
+  QC.Doc:
+    repos:
+      github.com/cyfronet-fid/pl-discovery-hub find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-firebrick-avocet.sh
+        container: qc.doc_cheeky-orchid-owl
+      github.com/cyfronet-fid/pl-discovery-hub git:
+        commands:
+        - /usr/bin/env sh .sqa/script.wiggy-brown-frigatebird.sh
+        container: qc.doc_flaky-heliotrope-rat
+      github.com/cyfronet-fid/pl-discovery-hub markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaggy-flax-setter.sh
+        container: qc.doc_dorky-denim-wolverine
+  QC.Lic:
+    repos:
+      github.com/cyfronet-fid/pl-discovery-hub licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-cerulean-crab.sh
+        container: qc.lic_stuffy-champagne-tapir
+  QC.Sec:
+    repos:
+      github.com/cyfronet-fid/pl-discovery-hub bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-violet-maltese.sh
+        container: qc.sec_bumpy-eggplant-squid
+  QC.Sty:
+    repos:
+      github.com/cyfronet-fid/pl-discovery-hub flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-asparagus-audemer.sh
+        container: qc.sty_squeaky-green-gibbon
+      github.com/cyfronet-fid/pl-discovery-hub hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-malachite-walrus.sh
+        container: qc.sty_shabby-chocolate-cockroach
+      github.com/cyfronet-fid/pl-discovery-hub jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.droopy-cobalt-cow.sh
+        container: qc.sty_chummy-orange-ladybird
+  QC.Uni:
+    repos:
+      github.com/cyfronet-fid/pl-discovery-hub pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.nerdy-razzmatazz-angelfish.sh
+        container: qc.uni_lousy-chestnut-otter
+  QC.Ver:
+    repos:
+      github.com/cyfronet-fid/pl-discovery-hub get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-taupe-skunk.sh
+        container: qc.ver_slaphappy-cyan-badger
+timeout: 5400
