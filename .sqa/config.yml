@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/cyfronet-fid/pl-discovery-hub git:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-alizarin-buffalo.sh
-        container: qc.acc_skanky-saffron-oriole
+        - /usr/bin/env sh .sqa/script.trippy-mustard-baboon.sh
+        container: qc.acc_squirrely-purple-chow
   QC.Doc:
     repos:
       github.com/cyfronet-fid/pl-discovery-hub find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-firebrick-avocet.sh
-        container: qc.doc_cheeky-orchid-owl
+        - /usr/bin/env sh .sqa/script.dorky-amethyst-sponge.sh
+        container: qc.doc_zippy-cyan-chihuahua
       github.com/cyfronet-fid/pl-discovery-hub git:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-brown-frigatebird.sh
-        container: qc.doc_flaky-heliotrope-rat
+        - /usr/bin/env sh .sqa/script.snappy-violet-wrasse.sh
+        container: qc.doc_tasty-wisteria-cuscus
       github.com/cyfronet-fid/pl-discovery-hub markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-flax-setter.sh
-        container: qc.doc_dorky-denim-wolverine
+        - /usr/bin/env sh .sqa/script.nerdy-beige-walrus.sh
+        container: qc.doc_boozy-chartreuse-tang
   QC.Lic:
     repos:
       github.com/cyfronet-fid/pl-discovery-hub licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-cerulean-crab.sh
-        container: qc.lic_stuffy-champagne-tapir
+        - /usr/bin/env sh .sqa/script.hasty-gold-pig.sh
+        container: qc.lic_goopy-chestnut-newfoundland
   QC.Sec:
     repos:
       github.com/cyfronet-fid/pl-discovery-hub bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-violet-maltese.sh
-        container: qc.sec_bumpy-eggplant-squid
+        - /usr/bin/env sh .sqa/script.queasy-red-binturong.sh
+        container: qc.sec_greasy-orchid-loon
   QC.Sty:
     repos:
       github.com/cyfronet-fid/pl-discovery-hub flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-asparagus-audemer.sh
-        container: qc.sty_squeaky-green-gibbon
+        - /usr/bin/env sh .sqa/script.thirsty-chocolate-slug.sh
+        container: qc.sty_tacky-chocolate-termite
       github.com/cyfronet-fid/pl-discovery-hub hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-malachite-walrus.sh
-        container: qc.sty_shabby-chocolate-cockroach
+        - /usr/bin/env sh .sqa/script.chewy-malachite-fousek.sh
+        container: qc.sty_nerdy-lilac-spitz
       github.com/cyfronet-fid/pl-discovery-hub jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-cobalt-cow.sh
-        container: qc.sty_chummy-orange-ladybird
+        - /usr/bin/env sh .sqa/script.ready-vermilion-gibbon.sh
+        container: qc.sty_sunny-purple-macaque
   QC.Uni:
     repos:
       github.com/cyfronet-fid/pl-discovery-hub pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-razzmatazz-angelfish.sh
-        container: qc.uni_lousy-chestnut-otter
+        - /usr/bin/env sh .sqa/script.skimpy-peach-anteater.sh
+        container: qc.uni_whiny-sepia-mongrel
   QC.Ver:
     repos:
       github.com/cyfronet-fid/pl-discovery-hub get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-taupe-skunk.sh
-        container: qc.ver_slaphappy-cyan-badger
+        - /usr/bin/env sh .sqa/script.gloppy-denim-butterfly.sh
+        container: qc.ver_jumpy-seashell-newt
 timeout: 5400
