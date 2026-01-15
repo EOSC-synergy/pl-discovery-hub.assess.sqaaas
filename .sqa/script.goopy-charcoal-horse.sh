@@ -5,5 +5,5 @@
 
 (
 cd github.com/cyfronet-fid/pl-discovery-hub &&
-    git rev-parse --is-inside-work-tree 
+    cffconvert --validate 
 )
